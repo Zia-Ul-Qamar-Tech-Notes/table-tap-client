@@ -12,41 +12,17 @@ import {
   Zap,
   Globe,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function LandingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-cyan-50 relative overflow-hidden">
-      {/* Background decorative elements */}
+      {/* Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-cyan-400 to-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
         <div className="absolute top-40 left-1/2 w-60 h-60 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
       </div>
-
-      {/* Header */}
-      <header className="relative z-50 border-b border-white/20 bg-white/80 backdrop-blur-xl sticky top-0">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <div className="p-2 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-xl shadow-lg">
-              <QrCode className="h-6 w-6 text-white" />
-            </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-              Table Tap
-            </span>
-          </div>
-          <div className="flex items-center space-x-6">
-            <button className="px-4 py-2 text-gray-700 hover:text-indigo-600 transition-all duration-300 font-medium">
-              Features
-            </button>
-            <button className="px-4 py-2 text-gray-700 hover:text-indigo-600 transition-all duration-300 font-medium">
-              Pricing
-            </button>
-            <button className="px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 font-medium">
-              Get Started
-            </button>
-          </div>
-        </div>
-      </header>
 
       {/* Hero Section */}
       <section className="relative py-24 px-4">
@@ -74,18 +50,21 @@ export default function LandingPage() {
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <button className="group inline-flex items-center px-10 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-lg rounded-2xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-indigo-500/25 transform hover:-translate-y-1 font-semibold">
-              Start Free Trial
+              Start For Free
               <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
-            <button className="px-10 py-4 text-lg border-2 border-gray-300 rounded-2xl hover:border-indigo-300 hover:bg-indigo-50 transition-all duration-300 font-semibold text-gray-700 hover:text-indigo-700">
-              View Demo
-            </button>
+            <Link
+              href="/pricing"
+              className="text-lg text-indigo-600 hover:text-indigo-800 font-semibold"
+            >
+              <button className="px-10 py-4 text-lg border-2 border-gray-300 rounded-2xl hover:border-indigo-300 hover:bg-indigo-50 transition-all duration-300 font-semibold text-gray-700 hover:text-indigo-700">
+                View Packages
+              </button>
+            </Link>
           </div>
 
-          {/* Hero Visual */}
           <div className="relative max-w-5xl mx-auto">
             <div className="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 rounded-3xl p-12 shadow-2xl relative overflow-hidden">
-              {/* Glassmorphism overlay */}
               <div className="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
 
               <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
@@ -434,7 +413,7 @@ export default function LandingPage() {
                     ))}
                   </div>
                   <p className="text-gray-600 mb-6 text-lg leading-relaxed italic">
-                    &quot; {testimonial.testimonial} &quot;
+                    `&#34;`{testimonial.testimonial}`&#34;`
                   </p>
                   <div className="flex items-center">
                     <div
@@ -481,66 +460,6 @@ export default function LandingPage() {
           </p>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-12">
-            <div>
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="p-2 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-xl">
-                  <QrCode className="h-6 w-6 text-white" />
-                </div>
-                <span className="text-2xl font-bold">Table Tap</span>
-              </div>
-              <p className="text-gray-400 mb-6 leading-relaxed">
-                The easiest way to create digital menus for your restaurant.
-                Fast, secure, and mobile-friendly.
-              </p>
-              <div className="flex space-x-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-full"></div>
-                <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full"></div>
-                <div className="w-10 h-10 bg-gradient-to-br from-pink-600 to-red-600 rounded-full"></div>
-              </div>
-            </div>
-
-            {[
-              {
-                title: "Product",
-                links: ["Features", "Pricing", "Demo", "API"],
-              },
-              {
-                title: "Support",
-                links: ["Help Center", "Contact Us", "Status", "Updates"],
-              },
-              {
-                title: "Company",
-                links: ["About", "Blog", "Careers", "Privacy"],
-              },
-            ].map((section, index) => (
-              <div key={index}>
-                <h3 className="font-bold mb-6 text-lg">{section.title}</h3>
-                <ul className="space-y-3">
-                  {section.links.map((link, linkIndex) => (
-                    <li key={linkIndex}>
-                      <a
-                        href="#"
-                        className="text-gray-400 hover:text-white transition-colors duration-300"
-                      >
-                        {link}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-
-          <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Table Tap. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
