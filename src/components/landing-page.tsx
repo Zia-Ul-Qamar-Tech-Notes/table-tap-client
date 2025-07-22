@@ -316,7 +316,7 @@ export default function LandingPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-5xl font-bold mb-8">
-                Why Restaurant Owners Choose QR Menu Pro
+                Why Restaurant Owners Choose Table Tap
               </h2>
               <div className="space-y-6">
                 {[
@@ -403,7 +403,7 @@ export default function LandingPage() {
                 avatar: "M",
                 gradient: "from-indigo-500 to-purple-500",
                 testimonial:
-                  "QR Menu Pro transformed our restaurant operations. Customers love the convenience and we save hundreds on printing costs every month.",
+                  "Table Tap transformed our restaurant operations. Customers love the convenience and we save hundreds on printing costs every month.",
               },
               {
                 name: "James Chen",
@@ -464,7 +464,7 @@ export default function LandingPage() {
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-5xl font-bold mb-6">Ready to Go Digital?</h2>
           <p className="text-xl mb-12 text-indigo-100 max-w-3xl mx-auto leading-relaxed">
-            Join hundreds of restaurants already using QR Menu Pro to deliver
+            Join hundreds of restaurants already using Table Tap to deliver
             better customer experiences and reduce costs.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
@@ -491,7 +491,7 @@ export default function LandingPage() {
                 <div className="p-2 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-xl">
                   <QrCode className="h-6 w-6 text-white" />
                 </div>
-                <span className="text-2xl font-bold">QR Menu Pro</span>
+                <span className="text-2xl font-bold">Table Tap</span>
               </div>
               <p className="text-gray-400 mb-6 leading-relaxed">
                 The easiest way to create digital menus for your restaurant.
@@ -537,7 +537,7 @@ export default function LandingPage() {
           </div>
 
           <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 QR Menu Pro. All rights reserved.</p>
+            <p>&copy; 2024 Table Tap. All rights reserved.</p>
           </div>
         </div>
       </footer>
