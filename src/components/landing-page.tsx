@@ -434,7 +434,7 @@ export default function LandingPage() {
                     ))}
                   </div>
                   <p className="text-gray-600 mb-6 text-lg leading-relaxed italic">
-                    "{testimonial.testimonial}"
+                    &quot; {testimonial.testimonial} &quot;
                   </p>
                   <div className="flex items-center">
                     <div
