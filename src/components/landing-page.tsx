@@ -446,14 +446,19 @@ export default function LandingPage() {
             Join hundreds of restaurants already using Table Tap to deliver
             better customer experiences and reduce costs.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
-            <button className="group inline-flex items-center px-10 py-4 bg-white text-indigo-600 hover:bg-gray-100 text-lg rounded-2xl transition-all duration-300 shadow-2xl hover:shadow-white/25 transform hover:-translate-y-1 font-bold">
-              Start Free Trial
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+            <button className="group inline-flex items-center px-10 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-lg rounded-2xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-indigo-500/25 transform hover:-translate-y-1 font-semibold">
+              Start For Free
               <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
-            <button className="px-10 py-4 text-lg border-2 border-white text-white hover:bg-white hover:text-indigo-600 rounded-2xl transition-all duration-300 font-semibold">
-              Schedule Demo
-            </button>
+            <Link
+              href="/pricing"
+              className="text-lg text-indigo-600 hover:text-indigo-800 font-semibold"
+            >
+              <button className="px-10 py-4 text-lg border-2 border-gray-300 rounded-2xl hover:border-indigo-300 hover:bg-indigo-50 transition-all duration-300 font-semibold text-gray-700 hover:text-indigo-700">
+                View Packages
+              </button>
+            </Link>
           </div>
           <p className="text-sm text-indigo-200">
             No credit card required • Setup in minutes • Cancel anytime

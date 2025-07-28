@@ -19,7 +19,7 @@ export default function Header() {
   const isActive = (href: string) => pathname === href;
 
   return (
-    <header className="relative z-50 border-b border-white/20 bg-white/80 backdrop-blur-xl sticky top-0">
+    <header className="relative z-50 border-b border-white/20 bg-white/80 backdrop-blur-xl top-0">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-3">
           <div className="p-2 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-xl shadow-lg">
